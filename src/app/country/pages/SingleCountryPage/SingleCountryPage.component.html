@@ -1,0 +1,46 @@
+<div class="md:flex md:justify-center md:gap-24 md:items-center p-5">
+  @if(countryResources.hasValue()){
+  <div class="md:w-2/6 ">
+    <img
+      [src]="countryResources.value()?.flags?.png"
+      [alt]="countryResources.value()?.name?.common"
+      class="h-full w-full"
+    />
+  </div>
+  <div class="md:w-1/2 p-5">
+    <h2 class="font-nunito font-extrabold text-4xl">
+      {{ countryResources.value()!.name!.common }}
+    </h2>
+    <div class="md:flex md:items-center mt-5">
+      <div class="md:w-1/2 md:gap-5">
+        <p class="font-nunito">
+          <strong class="font-bold">Native name: </strong
+          >{{ countryResources.value()!.name.common }}
+        </p>
+        <p class="font-nunito">
+          <strong class="font-bold">population: </strong
+          >{{ countryResources.value()!.population }}
+        </p>
+        <p class="font-nunito">
+          <strong class="font-bold">Region: </strong
+          >{{ countryResources.value()!.region }}
+        </p>
+        <p class="font-nunito">
+          <strong class="font-bold">sub Region: </strong
+          >{{ countryResources.value()!.subregion }}
+        </p>
+        <p class="font-nunito">
+          <strong class="font-bold">Capital: </strong
+          >{{ countryResources.value()!.capital }}
+        </p>
+      </div>
+      <div class="md:w-1/2 gap-5">
+        <p class="font-nunito"><strong class="font-bold">Currencies:</strong></p>
+        <p class="font-nunito"><strong class="font-bold">Language:</strong></p>
+        <p><strong>BorderCountries: </strong>{{countryResources.value()?.borders}}</p>
+      </div>
+
+    </div>
+  </div>
+  }
+</div>

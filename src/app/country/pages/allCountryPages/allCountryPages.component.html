@@ -1,0 +1,10 @@
+<section class="mt-10">
+  @if (countryResources.hasValue()) {
+    <countries-card-countries
+      [cardCountries]="countryResources.value() ?? []"
+      [errorMessage]="countryResources.error()"
+      [isEmpty]="countryResources.value()?.length === 0"
+      [isLoading]="countryResources.isLoading()"
+    />
+  }
+</section>

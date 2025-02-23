@@ -1,0 +1,35 @@
+
+<div class="flex flex-wrap gap-5 items-center justify-center my-20">
+  @for (country of cardCountries(); track country.cca3) {
+    <div class="shadow-md w-[350px] h-1/5 mx-auto rounded-md">
+        <img [src]="country.flags.svg" [alt]="country.name.common">
+      <div class="p-5">
+        <p class="font-nunito font-semibold text-2xl">{{country.name.common}}</p>
+        <p class="font-nunito"><strong>Population:</strong> {{country.population }}</p>
+        <p class="font-nunito"><strong>Region:</strong> {{country.region}}</p>
+        <p class="font-nunito"><strong>Capital:</strong> {{country.capital}}</p>
+        <a
+          [routerLink]="['/country/by', country.cca3]"
+          class="font-nunito hover:underline hover:font-bold">
+          Mas información
+        </a>
+      </div>
+    </div>
+  }
+
+  @if(errorMessage()){
+    <h2 class="font-nunito text-center font-extrabold text-4xl">{{errorMessage()}}</h2>
+
+  }
+
+  @if(cardCountries().length === 0 && !isLoading()) {
+    <h2 class="font-nunito text-center font-extrabold text-4xl">
+      No se encontraron resultados
+    </h2>
+  }
+
+  @if(isLoading()){
+    <h2 class="font-nunito text-center font-extrabold text-4xl">Buscando paises..</h2>
+  }
+</div>
+
