@@ -1,19 +1,29 @@
-<shared-navbar/>
+<shared-navbar />
 
-<section class="container mx-auto mt-10">
-  <div class="md:flex md:flex-row md:space-x-6 md:items-center ml-5 my-5">
-    <a routerLink="Pais" class="cursor-pointe bg-slate-800 text-white
-    hover:bg-gray-200 hover:text-black px-4 py-5 w-40 rounded-md font-nunito">
+<section class="container mx-auto mt-10 dark:bg-slate-800">
+  <div
+    class="md:flex md:flex-wrap space-y-2 md:space-y-0 md:space-x-6 md:items-center mx-5 my-5"
+  >
+    <a
+      routerLink="Pais"
+      class="cursor-pointer block bg-slate-800 text-white hover:bg-gray-200 hover:text-black p-2 md:px-4 md:py-5 md:w-36 rounded-md font-nunito"
+    >
       Buscar Paises
     </a>
-    <a routerLink="Region" class="cursor-point bg-slate-800 text-white
-    hover:bg-gray-200 hover:text-black px-4 py-5 w-40 rounded-md font-nunito">
+
+    <a
+      routerLink="Region"
+      class="cursor-pointer block bg-slate-800 text-white hover:bg-gray-200 hover:text-black p-2 md:px-4 md:py-5 md:w-40 rounded-md font-nunito"
+    >
       Buscar por region
     </a>
-    <a routerLink="Todos-los-paises" class="cursor-point bg-slate-800 text-white
-    hover:bg-gray-200 hover:text-black px-4 py-5 w-60 rounded-md font-nunito">
-      Mostrar Todos los paises
+
+    <a
+      routerLink="Todos-los-paises"
+      class="cursor-pointer block bg-slate-800 text-white hover:bg-gray-200 hover:text-black p-2 md:px-4 md:py-5 md:w-40 rounded-md font-nunito"
+    >
+      Todos los paises
     </a>
   </div>
-  <router-outlet/>
+  <router-outlet />
 </section>

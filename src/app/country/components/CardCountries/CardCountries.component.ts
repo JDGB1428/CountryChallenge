@@ -16,4 +16,6 @@ export class CardCountriesComponent {
   errorMessage = input<string | null | unknown>()
   isLoading = input<boolean>(false)
   isEmpty = input<boolean>(false)
+
+
 }

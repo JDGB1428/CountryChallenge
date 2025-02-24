@@ -1,12 +1,12 @@
-<nav class="py-10 shadow-md bg-White dark:bg-slate-800">
+<nav class="py-5 shadow-md bg-White dark:bg-slate-800">
   <div class="flex justify-between items-center container mx-auto px-5">
     <div>
-      <h2 class="font-nunito font-extrabold text-2xl dark:text-white">Where in the word?</h2>
+      <h2 class="font-nunito font-extrabold sm:text-2xl  dark:text-white">Where in the word?</h2>
     </div>
     <div>
       <button (click)="darkMode.set(!darkMode())">
-        <span *ngIf="!darkMode()" class="dark:text-white text-2xl cursor-pointer">dark mode</span>
-        <span *ngIf="darkMode()" class="dark:text-white text-2xl cursor-pointer">ligth mode</span>
+        <span *ngIf="!darkMode()" class="dark:text-white sm:text-2xl cursor-pointer">dark mode</span>
+        <span *ngIf="darkMode()" class="dark:text-white sm:text-2xl cursor-pointer">ligth mode</span>
       </button>
     </div>
   </div>

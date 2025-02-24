@@ -7,11 +7,11 @@
       class="h-full w-full"
     />
   </div>
-  <div class="md:w-1/2 p-5">
+  <div class="md:w-1/2 p-5 ">
     <h2 class="font-nunito font-extrabold text-4xl">
       {{ countryResources.value()!.name!.common }}
     </h2>
-    <div class="md:flex md:items-center mt-5">
+    <div class="md:flex md:items-center mt-5 flex-wrap">
       <div class="md:w-1/2 md:gap-5">
         <p class="font-nunito">
           <strong class="font-bold">Native name: </strong
@@ -37,9 +37,19 @@
       <div class="md:w-1/2 gap-5">
         <p class="font-nunito"><strong class="font-bold">Currencies:</strong></p>
         <p class="font-nunito"><strong class="font-bold">Language:</strong></p>
-        <p><strong>BorderCountries: </strong>{{countryResources.value()?.borders}}</p>
       </div>
+      <div class=" mt-5">
+        <p class="font-bold">BorderCountries:</p>
+        @if (!countryResources.value()?.borders) {
+          <p>It does not share neighboring borders</p>
+        }
 
+        @if(countryResources.value()?.borders){
+          <div class=" p-6 bg-white shadow-2xl rounded-md">
+            {{countryResources.value()?.borders}}
+          </div>
+        }
+      </div>
     </div>
   </div>
   }
