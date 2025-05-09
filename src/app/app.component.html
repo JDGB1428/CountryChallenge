@@ -1,1 +1,4 @@
-<router-outlet/>
+<div class="min-h-screen min-w-full bg-gray-100 dark:bg-slate-900" [ngClass]="darkModeService.darkModeSignal()">
+  <shared-navbar />
+  <router-outlet />
+</div>
