@@ -2,14 +2,14 @@
   <div class="relative md:inline-block text-left">
     <button
       (click)="toggleDropdown()"
-      class="px-4 py-5 w-40 mt-5 mx-5 bg-slate-800 font-nunito rounded-lg text-white shadow    cursor-pointer"
+      class="px-4 py-5 w-40 mt-5 mx-5 bg-slate-800 font-nunito rounded-lg text-white shadow cursor-pointer"
     >
       Filter by region
     </button>
 
     @if (isOpen()) {
     <div
-      class="absolute mt-2 w-48 bg-white border border-gray-300 shadow-lg rounded-lg transition-opacity duration-300"
+      class="absolute mt-2 w-48 bg-white border z-50 border-gray-300 shadow-lg rounded-lg transition-opacity duration-300"
       [class.opacity-100]="isOpen()"
       [class.opacity-0]="!isOpen()"
     >
