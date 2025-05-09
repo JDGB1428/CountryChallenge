@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, effect, HostBinding, signal } from '@angular/core';
+import { Component, effect, HostBinding, inject, signal } from '@angular/core';
+import { DarkModeService } from '../../../country/services/dark-mode.service';
 
 @Component({
   selector: 'shared-navbar',
@@ -7,17 +8,10 @@ import { Component, effect, HostBinding, signal } from '@angular/core';
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
-  darkMode = signal<boolean>(
-    JSON.parse(window.localStorage.getItem('darkMode')?? 'false')
-  )
 
-  @HostBinding('class.dark') get mode(){
-    return this.darkMode();
-  }
+  darkModeSevice:DarkModeService = inject(DarkModeService)
 
-  constructor(){
-    effect(() => {
-      window.localStorage.setItem('darkMode',JSON.stringify(this.darkMode()))
-    })
+  toggleDarkMode() {
+    this.darkModeSevice.updateDarkMode()
   }
 }
