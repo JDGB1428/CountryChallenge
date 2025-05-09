@@ -8,45 +8,46 @@
     />
   </div>
   <div class="md:w-1/2 p-5 ">
-    <h2 class="font-nunito font-extrabold text-4xl">
+    <h2 class="font-nunito font-extrabold text-4xl dark:text-white">
       {{ countryResources.value()!.name!.common }}
     </h2>
     <div class="md:flex md:items-center mt-5 flex-wrap">
       <div class="md:w-1/2 md:gap-5">
-        <p class="font-nunito">
+        <p class="font-nunito dark:text-white">
           <strong class="font-bold">Native name: </strong
           >{{ countryResources.value()!.name.common }}
         </p>
-        <p class="font-nunito">
+        <p class="font-nunito dark:text-white">
           <strong class="font-bold">population: </strong
           >{{ countryResources.value()!.population }}
         </p>
-        <p class="font-nunito">
+        <p class="font-nunito dark:text-white">
           <strong class="font-bold">Region: </strong
           >{{ countryResources.value()!.region }}
         </p>
-        <p class="font-nunito">
+        <p class="font-nunito dark:text-white">
           <strong class="font-bold">sub Region: </strong
           >{{ countryResources.value()!.subregion }}
         </p>
-        <p class="font-nunito">
+        <p class="font-nunito dark:text-white">
           <strong class="font-bold">Capital: </strong
           >{{ countryResources.value()!.capital }}
         </p>
       </div>
       <div class="md:w-1/2 gap-5">
-        <p class="font-nunito"><strong class="font-bold">Currencies:</strong></p>
-        <p class="font-nunito"><strong class="font-bold">Language:</strong></p>
+        <p class="font-nunito dark:text-white"><strong class="font-bold">Currencies:</strong></p>
+        <p class="font-nunito dark:text-white"><strong class="font-bold">Language:</strong></p>
       </div>
       <div class=" mt-5">
-        <p class="font-bold">BorderCountries:</p>
+        <p class="font-bold dark:text-white">BorderCountries:</p>
         @if (!countryResources.value()?.borders) {
-          <p>It does not share neighboring borders</p>
+          <p class="dark:text-white">It does not share neighboring borders</p>
         }
 
         @if(countryResources.value()?.borders){
-          <div class=" p-6 bg-white shadow-2xl rounded-md">
-            {{countryResources.value()?.borders}}
+          <div class=" p-6 dark:bg-slate-500 shadow-2xl rounded-md ">
+            <p class="dark:text-white">{{countryResources.value()?.borders}}</p>
+
           </div>
         }
       </div>
